@@ -1,0 +1,16 @@
+Simple put, this Mod allows for far better damage variation compared to Vanilla, Increases range of possible damages greatly without changing the % of variation and luck over 1 (100%) allows the code to re-roll the variation, rather than capping it at 1 (100%) luck.
+
+If you're interested in further details;
+
+This mod modifies how damage variation is calculated and changes following things:
+1. Damage Variation percentage is now calculated with Float values, so it doesn't go 15%, 14%, 13%, 12%... etc., but rather can be ANY decimal number between 15% and -15% by default.
+2. Luck over 100% (1f) can re-roll again (not capped to anything, you can even put 50f luck to have it rolled 50 times.) to try to get a higher value.
+3. End result damage rounding is replaced with a randomizer; Which first takes out integral part of the decimal value, and proceeds to roll a chance to get +1 or -1 with the remaining decimal value.
+
+What does the changes above & this Mod accomplish?
+1. Allows for better randomization, allowing you to have way more damage variation, especially with higher damage numbers. (Example: In vanilla, 1000 damage could go between 850 - 1150 damage, but only with multiplications of 10 (so only up to 30 variations), with this mod it can go up +1, being able to get numbers like 954 or 1028.)
+2. Makes any luck value over 1f not useless.
+3. Normally Vanilla directly rounds the number to nearest integral value, this Mod makes it so any value over the integral amount has that chance to be rolled +1 or -1. (Example: Damage Variation returns 20.283 damage, vanilla code would ALWAYS say: this is 20 damage. This mod makes it so its 20, but with 28.3% chance, it becomes 21.)
+4. Due to whats mentioned above; This Mod allows for higher damage variation range possible for some cases, compared to Vanilla. Although this can be usually noticed with low damage numbers. (Example: 9 damage with vanilla cannot get either 7 or 11 damage. This mod allows that.)
+
+Should be compatible with 99.99% of Vanilla. If a Mod is not using Vanilla Damage Variation, this mod will do nothing for that. Most Mods use it, so it should be completely fine.
