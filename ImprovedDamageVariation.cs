@@ -26,6 +26,7 @@ namespace ImprovedDamageVariation
         }
         private static int ModifyDamages(On_Main.orig_DamageVar_float_int_float orig, float dmg, int percent, float luck)
         {
+            orig(dmg,percent, luck);
             float damageAmount = dmg * (1f + Main.rand.NextFloat(-percent, percent) * 0.01f);
 
             int timesToRoll = Randomizer(luck);
